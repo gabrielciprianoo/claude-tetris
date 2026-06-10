@@ -84,6 +84,35 @@ body {
   border-radius: 4px;
 }
 
+/* ---- Skin selector ---- */
+.skin-select {
+  background: #22223a;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  color: #aaa;
+  font-size: 12px;
+  padding: 5px 8px;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+
+.skin-select:hover {
+  border-color: #7aa2f7;
+  color: #e0e0e0;
+}
+
+.skin-select option {
+  background: #22223a;
+  color: #e0e0e0;
+}
+
 /* ---- Controles ---- */
 .controls ul {
   list-style: none;
