@@ -44,11 +44,44 @@
       </aside>
     </div>
 
+    <!-- Game-over / pause overlay -->
     <div id="overlay" class="overlay hidden">
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+
+        <!-- Name entry (game-over only) -->
+        <div id="name-entry-section" class="name-entry-section hidden">
+          <label for="name-input" class="name-entry-label">Tu nombre:</label>
+          <div class="name-entry-row">
+            <input id="name-input" type="text" maxlength="20" placeholder="Anónimo" class="name-input" />
+            <button id="save-score-btn" class="action-btn">Guardar</button>
+          </div>
+        </div>
+        <p id="save-message" class="save-message"></p>
+
+        <!-- Records table in game-over overlay -->
+        <div class="records-section">
+          <p class="records-title">RÉCORDS</p>
+          <table id="records-table-gameover" class="records-table"></table>
+          <button id="reset-records-btn" class="reset-btn">Restablecer récords</button>
+        </div>
+
         <button id="restart-btn">Reiniciar</button>
+      </div>
+    </div>
+
+    <!-- Start screen overlay -->
+    <div id="start-overlay" class="overlay hidden">
+      <div class="overlay-box">
+        <p class="start-title">TETRIS</p>
+        <button id="play-btn" class="action-btn action-btn--primary">Jugar</button>
+
+        <!-- Records table on start screen -->
+        <div class="records-section">
+          <p class="records-title">RÉCORDS</p>
+          <table id="records-table-start" class="records-table"></table>
+        </div>
       </div>
     </div>
   </div>
