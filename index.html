@@ -44,11 +44,48 @@
       </aside>
     </div>
 
+    <!-- Start screen overlay -->
+    <div id="start-overlay" class="overlay">
+      <div class="overlay-box">
+        <p id="start-title" class="overlay-title-text">TETRIS</p>
+        <div class="level-selector">
+          <label for="start-level-select" class="overlay-label">Nivel inicial</label>
+          <select id="start-level-select" class="level-select"></select>
+        </div>
+        <button id="play-btn" class="overlay-btn overlay-btn-primary">Jugar</button>
+      </div>
+    </div>
+
+    <!-- Pause / Game-over overlay -->
     <div id="overlay" class="overlay hidden">
       <div class="overlay-box">
-        <p id="overlay-title">GAME OVER</p>
+        <p id="overlay-title" class="overlay-title-text">PAUSA</p>
         <p id="overlay-score"></p>
-        <button id="restart-btn">Reiniciar</button>
+
+        <!-- Pause menu buttons -->
+        <div id="pause-actions" class="overlay-actions">
+          <button id="resume-btn" class="overlay-btn overlay-btn-primary">Reanudar</button>
+          <button id="restart-btn" class="overlay-btn">Reiniciar</button>
+          <button id="controls-btn" class="overlay-btn">Ver controles</button>
+          <p id="pause-level-info" class="overlay-info"></p>
+        </div>
+
+        <!-- Inline controls panel (toggle) -->
+        <div id="controls-panel" class="controls-panel hidden">
+          <ul class="controls-list">
+            <li><kbd>←</kbd><kbd>→</kbd> mover</li>
+            <li><kbd>↑</kbd> / <kbd>X</kbd> rotar</li>
+            <li><kbd>↓</kbd> bajar suave</li>
+            <li><kbd>Space</kbd> caída dura</li>
+            <li><kbd>P</kbd> / <kbd>Esc</kbd> pausa</li>
+          </ul>
+          <button id="controls-back-btn" class="overlay-btn overlay-btn-small">Volver</button>
+        </div>
+
+        <!-- Game-over actions -->
+        <div id="gameover-actions" class="overlay-actions hidden">
+          <button id="gameover-restart-btn" class="overlay-btn overlay-btn-primary">Reiniciar</button>
+        </div>
       </div>
     </div>
   </div>

@@ -117,9 +117,10 @@ kbd {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 10, 20, 0.75);
+  background: rgba(10, 10, 20, 0.82);
   backdrop-filter: blur(4px);
   border-radius: 4px;
+  z-index: 10;
 }
 
 .overlay.hidden {
@@ -130,14 +131,23 @@ kbd {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
+  min-width: 220px;
+  padding: 28px 32px;
+  background: rgba(15, 15, 30, 0.9);
+  border: 1px solid #2a2a4a;
+  border-radius: 10px;
 }
 
-#overlay-title {
+.overlay-title-text {
   font-size: 28px;
   font-weight: 800;
   letter-spacing: 4px;
+  color: #7aa2f7;
+}
+
+#overlay-title {
   color: #e57373;
 }
 
@@ -147,20 +157,121 @@ kbd {
   color: #7aa2f7;
 }
 
-#restart-btn {
-  margin-top: 8px;
-  background: #7aa2f7;
-  color: #0f0f17;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 28px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: background 0.15s;
+/* ---- Overlay buttons ---- */
+.overlay-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
 }
 
-#restart-btn:hover {
+.overlay-actions.hidden {
+  display: none;
+}
+
+.overlay-btn {
+  width: 180px;
+  background: #22223a;
+  color: #e0e0e0;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.overlay-btn:hover {
+  background: #2e2e50;
+  border-color: #5a5a8a;
+}
+
+.overlay-btn-primary {
+  background: #7aa2f7;
+  color: #0f0f17;
+  border-color: #7aa2f7;
+}
+
+.overlay-btn-primary:hover {
   background: #9bbdff;
+  border-color: #9bbdff;
+}
+
+.overlay-btn-small {
+  width: 140px;
+  font-size: 12px;
+  padding: 7px 0;
+}
+
+/* ---- Level selector (start screen) ---- */
+.level-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.overlay-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #555570;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.level-select {
+  background: #22223a;
+  color: #e0e0e0;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  text-align: center;
+}
+
+.level-select:focus {
+  outline: none;
+  border-color: #7aa2f7;
+}
+
+/* ---- Controls panel (inline in pause menu) ---- */
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.controls-panel.hidden {
+  display: none;
+}
+
+.controls-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: stretch;
+}
+
+.controls-list li {
+  font-size: 12px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ---- Pause level info ---- */
+.overlay-info {
+  font-size: 11px;
+  color: #555570;
+  letter-spacing: 1px;
 }
