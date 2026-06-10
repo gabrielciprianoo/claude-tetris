@@ -275,3 +275,172 @@ kbd {
   color: #555570;
   letter-spacing: 1px;
 }
+
+/* ---- Start screen ---- */
+.start-title {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  color: #7aa2f7;
+  text-shadow: 0 0 20px rgba(122, 162, 247, 0.5);
+}
+
+/* ---- Action buttons ---- */
+.action-btn {
+  background: #7aa2f7;
+  color: #0f0f17;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+.action-btn:hover {
+  background: #9bbdff;
+}
+
+.action-btn--primary {
+  font-size: 16px;
+  padding: 12px 36px;
+  letter-spacing: 2px;
+}
+
+/* ---- Name entry ---- */
+.name-entry-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.name-entry-label {
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.name-entry-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.name-input {
+  background: #1a1a2e;
+  border: 1px solid #3a3a5a;
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-size: 14px;
+  padding: 6px 10px;
+  outline: none;
+  width: 150px;
+  transition: border-color 0.15s;
+}
+
+.name-input:focus {
+  border-color: #7aa2f7;
+}
+
+/* ---- Save message ---- */
+.save-message {
+  font-size: 13px;
+  min-height: 18px;
+  color: #aaa;
+}
+
+.save-message--success {
+  color: #81c784;
+  font-weight: 700;
+}
+
+.save-message--neutral {
+  color: #ffd54f;
+}
+
+/* ---- Records section ---- */
+.records-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.records-title {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #7aa2f7;
+}
+
+.records-table {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+  min-width: 260px;
+}
+
+.records-table th {
+  color: #555570;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 4px 8px;
+  text-align: center;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+.records-table td {
+  padding: 4px 8px;
+  text-align: center;
+  color: #ccc;
+  border-bottom: 1px solid #1e1e2e;
+}
+
+.records-table td:nth-child(2) {
+  text-align: left;
+}
+
+.records-table th:nth-child(2) {
+  text-align: left;
+}
+
+.records-highlight td {
+  color: #ffd54f;
+  font-weight: 700;
+}
+
+.records-empty {
+  color: #555570;
+  font-style: italic;
+  padding: 10px 0 !important;
+}
+
+/* ---- Reset button ---- */
+.reset-btn {
+  background: transparent;
+  border: 1px solid #3a3a5a;
+  border-radius: 5px;
+  color: #888;
+  font-size: 11px;
+  padding: 5px 12px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.reset-btn:hover {
+  border-color: #e57373;
+  color: #e57373;
+}
+
+/* ---- Overlay scroll (for smaller viewports) ---- */
+.overlay-box {
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px 20px;
+}

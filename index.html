@@ -44,18 +44,6 @@
       </aside>
     </div>
 
-    <!-- Start screen overlay -->
-    <div id="start-overlay" class="overlay">
-      <div class="overlay-box">
-        <p id="start-title" class="overlay-title-text">TETRIS</p>
-        <div class="level-selector">
-          <label for="start-level-select" class="overlay-label">Nivel inicial</label>
-          <select id="start-level-select" class="level-select"></select>
-        </div>
-        <button id="play-btn" class="overlay-btn overlay-btn-primary">Jugar</button>
-      </div>
-    </div>
-
     <!-- Pause / Game-over overlay -->
     <div id="overlay" class="overlay hidden">
       <div class="overlay-box">
@@ -84,7 +72,42 @@
 
         <!-- Game-over actions -->
         <div id="gameover-actions" class="overlay-actions hidden">
+          <!-- Name entry -->
+          <div id="name-entry-section" class="name-entry-section">
+            <label for="name-input" class="name-entry-label">Tu nombre:</label>
+            <div class="name-entry-row">
+              <input id="name-input" type="text" maxlength="20" placeholder="Anónimo" class="name-input" />
+              <button id="save-score-btn" class="overlay-btn">Guardar</button>
+            </div>
+          </div>
+          <p id="save-message" class="save-message"></p>
+
+          <!-- Records table in game-over overlay -->
+          <div class="records-section">
+            <p class="records-title">RÉCORDS</p>
+            <table id="records-table-gameover" class="records-table"></table>
+            <button id="reset-records-btn" class="reset-btn">Restablecer récords</button>
+          </div>
+
           <button id="gameover-restart-btn" class="overlay-btn overlay-btn-primary">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start screen overlay -->
+    <div id="start-overlay" class="overlay hidden">
+      <div class="overlay-box">
+        <p id="start-title" class="overlay-title-text">TETRIS</p>
+        <div class="level-selector">
+          <label for="start-level-select" class="overlay-label">Nivel inicial</label>
+          <select id="start-level-select" class="level-select"></select>
+        </div>
+        <button id="play-btn" class="overlay-btn overlay-btn-primary">Jugar</button>
+
+        <!-- Records table on start screen -->
+        <div class="records-section">
+          <p class="records-title">RÉCORDS</p>
+          <table id="records-table-start" class="records-table"></table>
         </div>
       </div>
     </div>
